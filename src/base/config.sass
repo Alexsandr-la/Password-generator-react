@@ -1,0 +1,35 @@
+@charset "UTF-8"
+
+$font: 'Montserrat Alternates', sans-serif
+$font-pass: 'Share Tech Mono', monospace
+
+$color: rgba(0, 0, 0, .65)
+$color-error: #f81d22
+
+// Основные разрешения
+// ===================
+$max-width: 1400px
+
+$desktop: 1330px
+$tablet: 991px
+$mobail: 767px
+$sm-mobail: 575px
+
+$min-width: 320px
+
+=max-width($width)
+	@media only screen and (max-width: $width)
+		@content
+
+=max-width-height($width)
+	@media only screen and (max-width: $width) and (max-height: 600px)
+		@content
+
+
+=full-wrap()
+	margin: 0 auto
+	position: relative
+	max-width: $max-width
+	min-width: $min-width
+	padding: 0 10px
+
